@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css - text</title>
+    <style>
+        body {
+            color: blue;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .h1 {
+            text-align: left;
+            text-decoration: overline;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .h2 {
+            text-align: center;
+            text-decoration: line-through;
+            text-transform: lowercase;
+            letter-spacing: -3px;
+        }
+
+        .h3 {
+            text-align: right;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 200px;
+        }
+
+        p.big {
+            line-height: 1.8;
+        }
+
+        p.small {
+            line-height: 0.8;
+            text-shadow: 30px 10px red;
+        }
+
+        table {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<p class="big">This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is
+    defined in the
+    body selector.</p>
+
+<hr>
+
+<h1 class="h1">Heading 1 (center)</h1>
+<h2 class="h2">Heading 2 (left)</h2>
+<h3 class="h3">Heading 3 (right)</h3>
+
+<p class="small">The three headings above are aligned center, left and right.</p>
+
+<hr>
+
+<h1>All CSS Text Properties</h1>
+
+<table>
+    <thead>
+    <tr>
+        <td>Property</td>
+        <td>Description</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>color</td>
+        <td>Sets the color of text</td>
+    </tr>
+    <tr>
+        <td>direction</td>
+        <td>Specifies the text direction/writing direction</td>
+    </tr>
+    <tr>
+        <td>letter-spacing</td>
+        <td>Increases or decreases the space between characters in a text</td>
+    </tr>
+    <tr>
+        <td>line-height</td>
+        <td>Sets the line height</td>
+    </tr>
+    <tr>
+        <td>text-align</td>
+        <td>Specifies the horizontal alignment of text</td>
+    </tr>
+    <tr>
+        <td>text-decoration</td>
+        <td>Specifies the decoration added to text</td>
+    </tr>
+    <tr>
+        <td>text-indent</td>
+        <td>Specifies the indentation of the first line in a text-block</td>
+    </tr>
+    <tr>
+        <td>text-shadow</td>
+        <td>Specifies the shadow effect added to text</td>
+    </tr>
+    <tr>
+        <td>text-transform</td>
+        <td>Controls the capitalization of text</td>
+    </tr>
+    <tr>
+        <td>text-overflow</td>
+        <td>Specifies how overflowed content that is not displayed should be signaled to the user</td>
+    </tr>
+    <tr>
+        <td>unicode-bidi</td>
+        <td>Used together with the direction property to set or return whether the text should be overridden to
+            support
+        </td>
+    </tr>
+    <tr>
+        <td>multiple</td>
+        <td>languages in the same document</td>
+    </tr>
+    <tr>
+        <td>vertical-align</td>
+        <td>Sets the vertical alignment of an element</td>
+    </tr>
+    <tr>
+        <td>white-space</td>
+        <td>Specifies how white-space inside an element is handled</td>
+    </tr>
+    <tr>
+        <td>word-spacing</td>
+        <td>Increases or decreases the space between words in a text</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
