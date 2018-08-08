@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css - tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th {
+            height: 50px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        td {
+            height: 50px;
+            vertical-align: center;
+            padding: 15px;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h1>CSS Table Properties</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>border</td>
+        <td>Sets all the border properties in one declaration</td>
+    </tr>
+    <tr>
+        <td>border-collapse</td>
+        <td>Specifies whether or not table borders should be collapsed</td>
+    </tr>
+    <tr>
+        <td>border-spacing</td>
+        <td>Specifies the distance between the borders of adjacent cells</td>
+    </tr>
+    <tr>
+        <td>caption-side</td>
+        <td>Specifies the placement of a table caption</td>
+    </tr>
+    <tr>
+        <td>empty-cells</td>
+        <td>Specifies whether or not to display borders and background on empty cells in a table</td>
+    </tr>
+    <tr>
+        <td>table-layout</td>
+        <td>Sets the layout algorithm to be used for a table</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
