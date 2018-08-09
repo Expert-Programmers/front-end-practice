@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Pseudo-classes</title>
+    <style>
+        pre {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        pre > code {
+            background-color: #eee;
+        }
+
+        p.hide {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        div:hover p.hide {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Syntax</h2>
+
+<p>The syntax of pseudo-classes:</p>
+<pre><code>selector:pseudo-class {
+    property:value;
+}</code></pre>
+
+<div>Hover over me to show the p element
+    <p class="hide">Tada! Here I am!</p>
+</div>
+
+
+</body>
+</html>
