@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How TO - Tabs</title>
+    <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+        }
+
+        .tab button:hover {
+            background: #ddd;
+        }
+
+        .tab button.active {
+            background: #ddd;
+        }
+
+        .tabcontent {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .topright {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <span class="topright" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <span class="topright" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <span class="topright" onclick="this.parentElement.style.display='none';">&times;</span>
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+    function openCity(event, cityName) {
+        const tabcontents = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].style.display = "none";
+        }
+
+        const tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", " ");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>
