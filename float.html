@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Layout - float and clear</title>
+    <style>
+        div {
+            border: 3px solid green;
+            padding: 5px;
+        }
+
+        img.right {
+            float: right;
+        }
+
+        img.left {
+            float: left;
+        }
+
+        .clearfix {
+            overflow: auto;
+        }
+
+        img.img2 {
+            float: right;
+        }
+
+        table, th, td {
+            border-collapse: collapse;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<p>
+    In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around
+    the image.
+</p>
+
+<p>
+    <img class="right" src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+    egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+    vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+    odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+    ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+    venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+    Mauris quis diam velit.
+</p>
+
+<hr>
+
+<p>
+    In this example, the image will float to the left in the paragraph, and the text in the paragraph will wrap around
+    the image.
+</p>
+
+<p>
+    <img class="left" src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+    egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+    vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+    odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+    ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+    venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+    Mauris quis diam velit.
+</p>
+
+<hr>
+
+<div class="clearfix">
+    <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+<h1>All CSS Float Properties</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>box-sizing</td>
+        <td>Defines how the width and height of an element are calculated: should they include padding and borders, or not</td>
+    </tr>
+    <tr>
+        <td>clear</td>
+        <td>Specifies what elements can float beside the cleared element and on which side</td>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>Specifies how an element should float</td>
+    </tr>
+    <tr>
+        <td>overflow</td>
+        <td>Specifies what happens if content overflows an element's box</td>
+    </tr>
+    <tr>
+        <td>overflow-x</td>
+        <td>Specifies what to do with the left/right edges of the content if it overflows the element's content area</td>
+    </tr>
+    <tr>
+        <td>overflow-y</td>
+        <td>Specifies what to do with the top/bottom edges of the content if it overflows the element's content area</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
