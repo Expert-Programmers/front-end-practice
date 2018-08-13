@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Rounded Corners</title>
+    <style>
+        table, th, td {
+            border: 1px solid green;
+            border-collapse: collapse;
+        }
+
+        #rcorners1 {
+            border-radius: 15px 50px 30px 5px;
+            background: #73ad21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #rcorners2 {
+            border-radius: 15px 50px 30px;
+            background: #73ad21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #rcorners3 {
+            border-radius: 15px 50px;
+            background: #73ad21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #rcorners4 {
+            border-radius: 15px;
+            background: #73ad21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h1>The border-radius Property</h1>
+
+<p>Four values - border-radius: 15px 50px 30px 5px:</p>
+<p id="rcorners1"></p>
+
+<p>Three values - border-radius: 15px 50px 30px:</p>
+<p id="rcorners2"></p>
+
+<p>Two values - border-radius: 15px 50px:</p>
+<p id="rcorners3"></p>
+
+<p>One value - border-radius: 15px:</p>
+<p id="rcorners4"></p>
+
+<hr>
+<h1>CSS Rounded Corners Properties</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>border-radius</td>
+        <td>A shorthand property for setting all the four border-*-*-radius properties</td>
+    </tr>
+    <tr>
+        <td>border-top-left-radius</td>
+        <td>Defines the shape of the border of the top-left corner</td>
+    </tr>
+    <tr>
+        <td>border-top-right-radius</td>
+        <td>Defines the shape of the border of the top-right corner</td>
+    </tr>
+    <tr>
+        <td>border-bottom-right-radius</td>
+        <td>Defines the shape of the border of the bottom-right corner</td>
+    </tr>
+    <tr>
+        <td>border-bottom-left-radius</td>
+        <td>Defines the shape of the border of the bottom-left corner</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
