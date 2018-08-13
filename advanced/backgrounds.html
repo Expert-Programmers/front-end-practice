@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Multiple Backgrounds</title>
+    <style>
+        table, th, td {
+            border: 3px solid red;
+            border-collapse: collapse;
+        }
+
+        #example1 {
+            background-image: url("img_flwr.gif"), url("paper.gif");
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Multiple Backgrounds</h1>
+<p>The following div element has two background images:</p>
+
+<div id="example1">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.
+    </p>
+    <p>
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+        commodo consequat.
+    </p>
+</div>
+
+<hr>
+
+<h1>CSS Advanced Background Properties</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>background</td>
+        <td>A shorthand property for setting all the background properties in one declaration</td>
+    </tr>
+    <tr>
+        <td>background-clip</td>
+        <td>Specifies the painting area of the background</td>
+    </tr>
+    <tr>
+        <td>background-image</td>
+        <td>Specifies one or more background images for an element</td>
+    </tr>
+    <tr>
+        <td>background-origin</td>
+        <td>Specifies where the background image(s) is/are positioned</td>
+    </tr>
+    <tr>
+        <td>background-size</td>
+        <td>Specifies the size of the background image(s)</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
