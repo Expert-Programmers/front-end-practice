@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Text Effects</title>
+    <style>
+        p.test1 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+
+        p.test2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p.test2:hover {
+            overflow: visible;
+        }
+
+        p.test {
+            border: 1px solid #000;
+            width: 11em;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<h1>The text-overflow Property</h1>
+<p>The following two paragraphs contains a long text that will not fit in the box.</p>
+
+<h2>text-overflow: clip:</h2>
+<p class="test1">This is some long text that will not fit in the box</p>
+
+<h2>text-overflow: ellipsis:</h2>
+<p class="test2">This is some long text that will not fit in the box</p>
+
+<hr>
+
+<h1>The word-wrap Property</h1>
+<p class="test"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
+    break and wrap to the next line.</p>
+
+
+<h1>CSS Text Effect Properties</h1>
+<p>The following table lists the CSS text effect properties:</p>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>text-align-last</td>
+        <td>Specifies how to align the last line of a text</td>
+    </tr>
+    <tr>
+        <td>text-justify</td>
+        <td>Specifies how justified text should be aligned and spaced</td>
+    </tr>
+    <tr>
+        <td>text-overflow</td>
+        <td>Specifies how overflowed content that is not displayed should be signaled to the user</td>
+    </tr>
+    <tr>
+        <td>word-break</td>
+        <td>Specifies line breaking rules for non-CJK scripts</td>
+    </tr>
+    <tr>
+        <td>word-wrap</td>
+        <td>Allows long words to be able to be broken and wrap onto the next line</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
