@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Web Fonts</title>
+    <style>
+        table, th, td {
+            border: 3px solid green;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Font Descriptors</h1>
+
+<p>The following table lists all the font descriptors that can be defined inside the <code>@font-face</code> rule:</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Descriptor</th>
+        <th>Values</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>font-family</td>
+        <td>name</td>
+        <td>Required. Defines a name for the font</td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>URL</td>
+        <td>Required. Defines the URL of the font file</td>
+    </tr>
+    <tr>
+        <td>font-stretch</td>
+        <td>normal <br>
+            condensed <br>
+            ultra-condensed <br>
+            extra-condensed <br>
+            semi-condensed <br>
+            expanded <br>
+            semi-expanded <br>
+            extra-expanded <br>
+            ultra-expanded</td>
+        <td>Optional. Defines how the font should be stretched. Default is "normal"</td>
+    </tr>
+    <tr>
+        <td>font-style</td>
+        <td>normal <br>
+            italic <br>
+            oblique</td>
+        <td>Optional. Defines how the font should be styled. Default is "normal"</td>
+    </tr>
+    <tr>
+        <td>font-weight</td>
+        <td>normal <br>
+            bold <br>
+            100 <br>
+            200 <br>
+            300 <br>
+            400 <br>
+            500 <br>
+            600 <br>
+            700 <br>
+            800 <br>
+            900</td>
+        <td>Optional. Defines the boldness of the font. Default is "normal"</td>
+    </tr>
+    <tr>
+        <td>unicode-range</td>
+        <td>unicode-range</td>
+        <td>Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
