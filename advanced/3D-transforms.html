@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3D Transforms</title>
+    <style>
+        div.test1 {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div.test1:hover {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transform: rotateX(150deg);
+        }
+
+        div.test2 {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div.test2:hover {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transform: rotateY(150deg);
+        }
+
+        table, th, td {
+            border: 3px solid cadetblue;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<div class="test1">This div element is rotated 150 degrees.</div>
+<hr>
+<div class="test2">This div element is rotated 150 degrees.</div>
+<hr>
+
+<h1>3D Transform Methods</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Function</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</td>
+        <td>Defines a 3D transformation, using a 4x4 matrix of 16 values</td>
+    </tr>
+    <tr>
+        <td>translate3d(x,y,z)</td>
+        <td>Defines a 3D translation</td>
+    </tr>
+    <tr>
+        <td>translateX(x)</td>
+        <td>Defines a 3D translation, using only the value for the X-axis</td>
+    </tr>
+    <tr>
+        <td>translateY(y)</td>
+        <td>Defines a 3D translation, using only the value for the Y-axis</td>
+    </tr>
+    <tr>
+        <td>translateZ(z)</td>
+        <td>Defines a 3D translation, using only the value for the Z-axis</td>
+    </tr>
+    <tr>
+        <td>scale3d(x,y,z)</td>
+        <td>Defines a 3D scale transformation</td>
+    </tr>
+    <tr>
+        <td>scaleX(x)</td>
+        <td>Defines a 3D scale transformation by giving a value for the X-axis</td>
+    </tr>
+    <tr>
+        <td>scaleY(y)</td>
+        <td>Defines a 3D scale transformation by giving a value for the Y-axis</td>
+    </tr>
+    <tr>
+        <td>scaleZ(z)</td>
+        <td>Defines a 3D scale transformation by giving a value for the Z-axis</td>
+    </tr>
+    <tr>
+        <td>rotate3d(x,y,z,angle)</td>
+        <td>Defines a 3D rotation</td>
+    </tr>
+    <tr>
+        <td>rotateX(angle)</td>
+        <td>Defines a 3D rotation along the X-axis</td>
+    </tr>
+    <tr>
+        <td>rotateY(angle)</td>
+        <td>Defines a 3D rotation along the Y-axis</td>
+    </tr>
+    <tr>
+        <td>rotateZ(angle)</td>
+        <td>Defines a 3D rotation along the Z-axis</td>
+    </tr>
+    <tr>
+        <td>perspective(n)</td>
+        <td>Defines a perspective view for a 3D transformed element</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
