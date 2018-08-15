@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS The object-fit Property</title>
+    <style>
+        img.test1 {
+            width: 200px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<img class="test1" src="paris.jpg" alt="Paris">
+<hr>
+
+<h1>All Values of The CSS object-fit Propert</h1>
+<p>The <code>object-fit</code> property can have the following values:</p>
+<table>
+    <tbody>
+    <tr>
+        <td>fill</td>
+        <td>This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished
+            to fit
+        </td>
+    </tr>
+    <tr>
+        <td>contain</td>
+        <td>The replaced content is scaled to maintain its aspect ratio while fitting within the element's content box</td>
+    </tr>
+    <tr>
+        <td>cover</td>
+        <td>The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to
+            fit
+        </td>
+    </tr>
+    <tr>
+        <td>none</td>
+        <td>The replaced content is not resized</td>
+    </tr>
+    <tr>
+        <td>scale-down</td>
+        <td>The content is sized as if none or contain were specified (would result in a smaller concrete object size)</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
