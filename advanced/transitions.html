@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transitions</title>
+    <style>
+        div.test1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s;
+        }
+
+        div.test1:hover {
+            width: 300px;
+            height: 600px;
+        }
+
+        div.test2 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+            transition-delay: 1s;
+        }
+
+        div.test2:hover {
+            width: 300px;
+        }
+
+        div.test3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 2s, transform 10s;
+        }
+
+        div.test3:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+        }
+
+        table, th, td {
+            border: 3px solid blueviolet;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<div class="test1"></div>
+<hr>
+<div class="test2"></div>
+<hr>
+<div class="test3"></div>
+<hr>
+
+<h1>CSS Transition Properties</h1>
+<p>The following table lists all the CSS transition properties:</p>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>transition</td>
+        <td>A shorthand property for setting the four transition properties into a single property</td>
+    </tr>
+    <tr>
+        <td>transition-delay</td>
+        <td>Specifies a delay (in seconds) for the transition effect</td>
+    </tr>
+    <tr>
+        <td>transition-duration</td>
+        <td>Specifies how many seconds or milliseconds a transition effect takes to complete</td>
+    </tr>
+    <tr>
+        <td>transition-property</td>
+        <td>Specifies the name of the CSS property the transition effect is for</td>
+    </tr>
+    <tr>
+        <td>transition-timing-function</td>
+        <td>Specifies the speed curve of the transition effect</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
