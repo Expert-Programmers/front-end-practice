@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations</title>
+    <style>
+        div.test1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        div.test1:hover {
+            animation-name: test1;
+            animation-duration: 4s;
+        }
+
+        @keyframes test1 {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+
+        div.test2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: test2;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes test2 {
+            0% {
+                background-color: red;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="test1"></div>
+<hr>
+<div class="test2"></div>
+<hr>
+
+<h1>CSS Animation Properties</h1>
+<p>The following table lists the @keyframes rule and all the CSS animation properties:</p>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@keyframes</td>
+        <td>Specifies the animation code</td>
+    </tr>
+    <tr>
+        <td>animation</td>
+        <td>A shorthand property for setting all the animation properties</td>
+    </tr>
+    <tr>
+        <td>animation-delay</td>
+        <td>Specifies a delay for the start of an animation</td>
+    </tr>
+    <tr>
+        <td>animation-direction</td>
+        <td>Specifies whether an animation should be played forwards, backwards or in alternate cycles</td>
+    </tr>
+    <tr>
+        <td>animation-duration</td>
+        <td>Specifies how long time an animation should take to complete one cycle</td>
+    </tr>
+    <tr>
+        <td>animation-fill-mode</td>
+        <td>Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)</td>
+    </tr>
+    <tr>
+        <td>animation-iteration-count</td>
+        <td>Specifies the number of times an animation should be played</td>
+    </tr>
+    <tr>
+        <td>animation-name</td>
+        <td>Specifies the name of the @keyframes animation</td>
+    </tr>
+    <tr>
+        <td>animation-play-state</td>
+        <td>Specifies whether the animation is running or paused</td>
+    </tr>
+    <tr>
+        <td>animation-timing-function</td>
+        <td>Specifies the speed curve of the animation</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
