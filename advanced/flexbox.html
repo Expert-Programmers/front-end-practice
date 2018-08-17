@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flexbox</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: lightblue;
+            justify-content: space-between;
+        }
+
+        .flex-container div {
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+<h1>CSS Flexbox Properties</h1>
+<p>The following table lists the CSS properties used with flexbox:</p>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>display</td>
+        <td>Specifies the type of box used for an HTML element</td>
+    </tr>
+    <tr>
+        <td>flex-direction</td>
+        <td>Specifies the direction of the flexible items inside a flex container</td>
+    </tr>
+    <tr>
+        <td>justify-content</td>
+        <td>Horizontally aligns the flex items when the items do not use all available space on the main-axis</td>
+    </tr>
+    <tr>
+        <td>align-items</td>
+        <td>Vertically aligns the flex items when the items do not use all available space on the cross-axis</td>
+    </tr>
+    <tr>
+        <td>flex-wrap</td>
+        <td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line</td>
+    </tr>
+    <tr>
+        <td>align-content</td>
+        <td>Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines</td>
+    </tr>
+    <tr>
+        <td>flex-flow</td>
+        <td>A shorthand property for flex-direction and flex-wrap</td>
+    </tr>
+    <tr>
+        <td>order</td>
+        <td>Specifies the order of a flexible item relative to the rest of the flex items inside the same container</td>
+    </tr>
+    <tr>
+        <td>align-self</td>
+        <td>Used on flex items. Overrides the container's align-items property</td>
+    </tr>
+    <tr>
+        <td>flex</td>
+        <td>A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
