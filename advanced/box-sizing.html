@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Sizing</title>
+    <style>
+        h1 {
+            border: 2px solid blueviolet;
+            padding: 20px;
+        }
+
+        .div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid green;
+        }
+
+        .div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>width + padding + border = actual width of an element</h1>
+<h1>height + padding + border = actual height of an element</h1>
+
+<hr>
+<div class="div1">This div is smaller (width is 300px and height is 100px).</div>
+<br>
+<div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
+
+</body>
+</html>
