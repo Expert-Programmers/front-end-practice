@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Video</title>
+</head>
+<body>
+
+<div style="text-align: center">
+  <button onclick="playPause()">Play / Pause</button>
+
+  <video id="myVideo" width="320" height="240" autoplay controls>
+    <source src="./mov_bbb.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+  const myVideo = document.querySelector('#myVideo');
+
+  function playPause() {
+    if (myVideo.paused) {
+      myVideo.play();
+    } else {
+      myVideo.pause();
+    }
+  }
+</script>
+</body>
+</html>
