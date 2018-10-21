@@ -1,7 +1,9 @@
-const dice = 3;
 const sides = 6;
-const query = `query RollDice($dice: Int!, $sides: Int) {
-  rollDice(numDice: $dice, numSides: $sides)
+const query = `{
+  getDie(numSides: 6) {
+    rollOnce,
+    roll(numRolls: 3)
+  }
 }`;
 
 fetch('/graphql', {
@@ -10,10 +12,7 @@ fetch('/graphql', {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   },
-  body: JSON.stringify({
-    query,
-    variables: { dice, sides }
-  })
+  body: JSON.stringify({ query, variables: { sides } })
 })
   .then(r => r.json())
   .then(data => console.log(data));
