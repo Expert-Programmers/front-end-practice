@@ -191,8 +191,94 @@ class Animal8 {
 let a8: Animal8 = new Animal8('Jack');
 console.log(a8.sayHi());
 
+// 类实现接口
+interface Alarm {
+    alert();
+}
 
+class Door {
+}
 
+class SecurityDoor extends Door implements Alarm {
+    alert() {
+        console.log('SecurityDoor alert');
+    }
+}
 
+class Car implements Alarm {
+    alert() {
+        console.log('Car alert');
+    }
+}
 
+interface Light {
+    lightOn();
 
+    lightOff();
+}
+
+class Car2 implements Alarm, Light {
+    alert() {
+        console.log('Car alert');
+    }
+
+    lightOff() {
+        console.log('Car light off');
+    }
+
+    lightOn() {
+        console.log('Car light on');
+    }
+}
+
+// 接口继承接口
+
+interface LightableAlarm extends Alarm {
+    lightOn();
+
+    lightOff();
+}
+
+class Point {
+    x: number;
+    y: number;
+}
+
+// 接口继承类
+interface Point3d extends Point {
+    z: number;
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+
+// 混合类型
+interface SearchFunc {
+    (source: string, subString: string): boolean;
+}
+
+let mySearch: SearchFunc;
+mySearch = function (source: string, subString: string) {
+    return source.search(subString) !== -1;
+};
+
+interface Counter {
+    (start: number): string;
+
+    interval: number;
+
+    reset(): void;
+}
+
+function getCounter(): Counter {
+    let counter = <Counter>function (start: number) {
+    };
+    counter.interval = 123;
+    counter.reset = function () {
+    };
+    return counter;
+}
+
+let c2 = getCounter();
+c2(10);
+c2.reset();
+c2.interval = 5.0;
