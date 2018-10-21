@@ -60,25 +60,136 @@ const enum Directions {
 
 let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 
+// 类
+// 属性和方法
+class Animal {
+    protected name: string;
 
+    constructor(name: string) {
+        this.name = name;
+    }
 
+    sayHi(): string {
+        return `My name is ${this.name}`;
+    }
+}
 
+let a = new Animal('Jack');
+a.sayHi();
 
+class Cat extends Animal {
+    constructor(name: string) {
+        super(name); // 调用父类的 constructor(name)
+        console.log(this.name);
+    }
 
+    sayHi(): string {
+        return 'Meow, ' + super.sayHi();
+    }
+}
 
+let c = new Cat('Tom');
+console.log(c.sayHi());
 
+class Animal2 {
+    constructor(name: string) {
+        this.name = name;
+    }
 
+    get name() {
+        return 'Jack';
+    }
 
+    set name(value) {
+        console.log('setter: ' + value);
+    }
+}
 
+let a2 = new Animal2('Kitty');
+a2.name = 'Tom';
+console.log(a2.name);
 
+// 静态方法
+class Animal3 {
+    static isAnimal(a: any) {
+        return a instanceof Animal3;
+    }
+}
 
+let a3 = new Animal3();
+Animal3.isAnimal(a);
+// a.isAnimal(a);
 
+// ES7 中类的用法
+// 实例属性
+class Animal4 {
+    name = 'Jack';
 
+    constructor() {
+        //    ...
+    }
+}
 
+let a4 = new Animal4();
+console.log(a4.name);
 
+// 静态属性
+class Animal5 {
+    static num = 42;
 
+    constructor() {
+        //    ...
+    }
+}
 
+console.log(Animal5.num);
 
+// 抽象类
+abstract class Animal6 {
+    public name: string;
+
+    public constructor(name: string) {
+        this.name = name;
+    }
+
+    public abstract sayHi();
+}
+
+// let a6 = new Animal6('');
+
+abstract class Animal7 {
+    public name: string;
+
+    public constructor(name: string) {
+        this.name = name;
+    }
+
+    public abstract sayHi();
+}
+
+class Cat7 extends Animal7 {
+    public sayHi() {
+        console.log(`Meow, My name is ${this.name}`);
+    }
+}
+
+let cat = new Cat7('Tom');
+
+// 类的类型
+class Animal8 {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    sayHi(): string {
+        return `My name is ${this.name}`;
+    }
+}
+
+let a8: Animal8 = new Animal8('Jack');
+console.log(a8.sayHi());
 
 
 
