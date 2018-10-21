@@ -236,3 +236,6 @@ function getLength2(something: string | number) {
         return something.toString().length;
     }
 }
+
+/// <reference path="./jQuery.d.ts" />
+// jQuery('#foo');
