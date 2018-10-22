@@ -282,3 +282,109 @@ let c2 = getCounter();
 c2(10);
 c2.reset();
 c2.interval = 5.0;
+
+// 泛型
+function createArray(length: number, value: any): Array<any> {
+    let result = [];
+    for (let i = 0; i < length; i++) {
+        result.push(value);
+    }
+    return result;
+}
+
+createArray(3, 'x');
+
+function createGenericArray<T>(length: number, value: T): Array<T> {
+    let result = [];
+    for (let i = 0; i < length; i++) {
+        result.push(value);
+    }
+    return result;
+}
+
+createGenericArray<string>(3, 'x');
+
+// 多个类型参数
+function swap<T, U>(tuple: [T, U]): [U, T] {
+    return [tuple[1], tuple[0]];
+}
+
+swap<number, string>([7, 'seven']);
+
+// 泛型约束
+interface Lengthwise {
+    length: number;
+}
+
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+    console.log(arg.length);
+    return arg;
+}
+
+function copyFields<T extends U, U>(target: T, source: U): T {
+    for (let id in source) {
+        target[id] = (<T>source)[id];
+    }
+    return target;
+}
+
+let x = {a: 1, b: 2, c: 3, d: 4};
+
+copyFields(x, {b: 10, d: 20});
+
+// 泛型接口
+interface SearchFunc2 {
+    (source: string, substring: string): boolean;
+}
+
+let mySearch2: SearchFunc2;
+mySearch2 = (source: string, substring: string): boolean => {
+    return source.search(substring) !== -1;
+};
+
+interface CreateArrayFunc {
+    <T>(length: number, value: T): Array<T>;
+}
+
+let createArray_: CreateArrayFunc;
+createArray_ = <T>(length: number, value: T): Array<T> => {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result.push(value);
+    }
+    return result;
+};
+
+interface CreateArrayFunc__<T> {
+    (length: number, value: T): Array<T>;
+}
+
+let createArray__: CreateArrayFunc__<any>;
+createArray__ = <T>(length: number, value: T): Array<T> => {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result.push(value);
+    }
+    return result;
+};
+
+createArray__(3, 'x');
+
+// 泛型类
+class GenericNumber<T> {
+    zeroValue: T;
+    add: (x: T, y: T) => T;
+}
+
+let myGenericNumber: GenericNumber<number> = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = (x, y) => x + y;
+
+// 泛型参数的默认类型
+function createArrayDefault<T = string>(length: number, value: T): Array<T> {
+    let result: T[] = [];
+    for (let i = 0; i < length; i++) {
+        result.push(value);
+    }
+    return result;
+}
