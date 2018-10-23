@@ -388,3 +388,30 @@ function createArrayDefault<T = string>(length: number, value: T): Array<T> {
     }
     return result;
 }
+
+// 函数的合并
+function reverse2(x: number): number;
+function reverse2(x: string): string;
+function reverse2(x: number | string): number | string {
+    if (typeof x === "number") {
+        return x.toString().split('').reverse().join('');
+    } else if (x === "string") {
+        return x.split('').reverse().join('');
+    }
+}
+
+// 接口的合并
+interface Alarm3 {
+    price: number;
+}
+
+interface Alarm3 {
+    weight: number;
+}
+
+// equal to:
+
+interface Alarm4 {
+    price: number;
+    weight: number;
+}
