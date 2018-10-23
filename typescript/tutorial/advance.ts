@@ -415,3 +415,19 @@ interface Alarm4 {
     price: number;
     weight: number;
 }
+
+// for..of 语句
+let someArray = [1, "string", false];
+
+for (let entry of someArray) {
+    console.log(entry);
+}
+
+let list = [4, 5, 6];
+
+for (let i in list) {
+    console.log(i);
+}
+for (let i of list) {
+    console.log(i);
+}
