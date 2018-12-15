@@ -6,3 +6,8 @@ databaseType: document
 generate:
   - generator: typescript-client
     output: ./generated/prisma-client/
+
+# automatically being updated after every deploy
+hooks:
+  post-deploy:
+    - prisma generate
