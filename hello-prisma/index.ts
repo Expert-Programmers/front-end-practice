@@ -1,34 +1,16 @@
-import { prisma, User } from "./generated/prisma-client";
+import { GraphQLServer } from 'graphql-yoga'
 
-// A `main` function so that we can use async/await
-async function main() {
+import { prisma } from './generated/prisma-client'
+import { resolvers } from "./resolvers";
 
-  // Create a new user called `Alice`
-  // const newUser: User = await prisma.createUser({
-  //   name: "Bob",
-  //   email: "bob@prisma.io",
-  //   posts: {
-  //     create: {
-  //       title: "The data layer for modern apps"
-  //     }
-  //   }
-  // });
-  //
-  // console.log(`Created new user: ${newUser.name} (ID: ${newUser.id})`);
-  //
-  // Read all users from the database and print them to the console
-  // const allUsers = await prisma.users();
-  // console.log(allUsers);
-  //
-  // const allPosts = await prisma.posts();
-  // console.log(allPosts);
 
-  // Read the previously created user from the database and print their posts to the console
-  const postByUser = await prisma
-    .user({ email: "bob@prisma.io" })
-    .posts();
-  console.log(`All posts by that user: ${JSON.stringify(postByUser)}`);
+const server = new GraphQLServer({
+  typeDefs: './schema.graphql',
+  resolvers,
+  context: {
+    prisma
+  },
+});
 
-}
-
-main().catch(e => console.error(e));
+server.start(() => console.log('Server is running on http://localhost:4000'))
+  .catch((error) => console.error("looks like some error:", error.message));
